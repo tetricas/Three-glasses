@@ -97,8 +97,6 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             {
                 HMENU hMenu = CreatePopupMenu();
 
-                //AppendMenu( hMenu, MFT_STRING, 10, "&Новая" );
-                //AppendMenu(hMenu, MF_SEPARATOR, 1000, "");
                 AppendMenu( hMenu, MFT_STRING, 10, "&Легко" );
                 AppendMenu( hMenu, MFT_STRING, 20, "&Средне" );
                 AppendMenu( hMenu, MFT_STRING, 30, "&Трудно" );
@@ -121,7 +119,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             break;
 
         case WM_TIMER:
-
+            
             glass.Timer(hwnd, glass2, glass3);
             glass.Level(level);
 
